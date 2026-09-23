@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head> <!--AQUI VIENE LOS METADATOS Y LA CONEXION al style.css-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Enrique López">
+<meta name="description" content="Es un diseño de carrito de compras de sneakers">
+<meta name="keywords" content="sneakers, deporte, moda">
+<!--Es el titulo de la pagina web-->
+<title> Carrito de compras - Sole </title>
+<!--Enlaza con la hoja de estilos-->
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body class="paper-texture">
+
+
+ 
+
+<!--<span class="logo-icon">👟</span>-->
+
+
+    <!--ENCABEZADO-->
+
+<header class="site-header">
+    <div class="container header-inner">
+
+ <a href="#inicio" class="logo">
+  <img src="img/logo.png" alt="Logo de Sole" 
+
+        Sole
+
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Best sellers</a></li>
+          <li><a href="#oferta">Beneficios</a></li>
+          <li><a href="#contacto">About Sole</a></li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero comprar un par de sneakers de SOLE.')">
+          <i data-lucide="message-circle"></i> Comprar ahora
+        </button>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </div>
+<nav id="mobile-menu" class="mobile-nav">
+    <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Best sellers</a></li>
+          <li><a href="#oferta">Beneficios</a></li>
+          <li><a href="#contacto">About Sole</a></li>
+        </ul>
+ <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Sole.')">
+        <i data-lucide="message-circle"></i> Pedir ahora
+      </button>
+
+</nav>
+ 
+</header>
+<main>
+    
+ <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">SNEAKERS WITH CHARACTER</p>
+          <h1>Tu estilo empieza desde los pies</h1>
+          <p class="lead">Descubre sneakers seleccionados para quienes buscan un estilo limpio,
+atemporal y diferente.</p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Ver colleción</a>
+            <button type="button" class="btn outline" onclick="openWhatsApp('Hola, vi la página y quiero conocer los sneakers disponibles.')">Comprar por WhatsApp</button>
+          </div>
+          <p class="trust"><i data-lucide="heart"></i> Estilo que trasciende tendencias </p>
+        </div>
+        <div class="hero-image reveal">
+          <img src="img/BILLBOARD.png" alt="Sneakers Sole">
+        </div>
+      </div>
+    </section>
+
+<!-- ================= PRODUCTOS ================= -->
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Regalos con historia</p>
+          <h2>Conoce nuestros productos</h2>
+          <p class="lead">Elige un detalle especial y hazlo único.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="img/Gats.png" alt="Producto 1">
+            <div class="product-body">
+              <span class="tag">Iconic</span>
+              <h3>Maison Margiela Gats</h3>
+              <p class="price">$16,900 MXN</p>
+             <p class="description">Diseño minimalista y atemporal para un estilo sofisticado.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/Golden.png" alt="Producto 2">
+            <div class="product-body">
+              <span class="tag">Premium</span>
+              <h3>Golden Goose</h3>
+              <p class="price">$18,900 MXN</p>
+              <p class="description">Un clásico de inspiración vintage con personalidad propia.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-vela')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="Img/new balance.png" alt="Producto 3">
+            <div class="product-body">
+              <span class="tag">Classic</span>
+              <h3>New Balance 990v6</h3>
+              <p class="price">$3,999 MXN</p>
+              <p class="description">Comodidad y diseño premium para un estilo cotidiano.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-taza')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/Samba.png" alt="Producto 4">
+            <div class="product-body">
+              <span class="tag">Essential</span>
+              <h3>Adidas Samba OG</h3>
+              <p class="price">$2,900 MXN</p>
+              <p class="description">Una silueta clásica que combina con cualquier look.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <img src="img/Common Projects.png" alt="Producto 6">
+            <div class="product-body">
+              <span class="tag">Minimal</span>
+              <h3>Common Projects</h3>
+              <p class="price">$9,725 MXN</p>
+              <p class="description">Diseño limpio y sofisticado para un estilo elegante y versátil.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-kit')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/Onitzuka.png" alt="Producto 7">
+            <div class="product-body">
+              <span class="tag">Timeless</span>
+              <h3>Onitsuka Tiger Mexico 66</h3>
+              <p class="price">$5,106 MXN</p>
+              <p class="description">Una silueta ligera con inspiración clásica y elegante..</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+          <img src="img/Autry.png" alt="Producto 8">
+            <div class="product-body">
+            <span class="tag">Vintage</span>
+            <h3>Autry Medalist Low</h3>
+            <p class="price">$4,999 MXN</p>
+            <p class="description">Diseño retro y sofisticado con una estética limpia y atemporal.</p>
+            <button type="button" class="btn card" onclick="openModal('modal-autry')">Ver producto</button>
+            </div>
+          </article>
+
+<article class="product-card reveal">
+  <img src="img/Axel.png" alt="Producto 9">
+  <div class="product-body">
+    <span class="tag">Refined</span>
+    <h3>Axel Arigato Clean 90</h3>
+    <p class="price">$7,500 MXN</p>
+    <p class="description">Una silueta minimalista y elegante pensada para un estilo sofisticado.</p>
+    <button type="button" class="btn card" onclick="openModal('modal-axel')">Ver producto</button>
+  </div>
+</article>
+
+<article class="product-card reveal">
+  <img src="img/Veja.png" alt="Producto 10">
+  <div class="product-body">
+    <span class="tag">Essential</span>
+    <h3>Veja Campo</h3>
+    <p class="price">$3,200 MXN</p>
+    <p class="description">Un diseño sencillo y versátil que combina perfectamente con cualquier look.</p>
+    <button type="button" class="btn card" onclick="openModal('modal-veja')">Ver producto</button>
+  </div>
+</article>
+
+        </div>
+      </div>
+    </section>
+
+<!-- ================= BENEFICIOS ================= -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>¿Por qué elegir Sole?</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="flame"></i></div>
+            <h3>Selección exclusiva</h3>
+            <p>Elegimos sneakers que destacan por su diseño y personalidad.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="message-circle"></i></div>
+            <h3>Atención personalizada</h3>
+            <p>Te ayudamos a encontrar el par que mejor va con tu estilo.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="plane-takeoff"></i></div>
+            <h3>Envíos a todo el mundo</h3>
+            <p>Recibe tu próximo par estés donde estés.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="mouse-pointer-click"></i></div>
+            <h3>Compra sencilla</h3>
+            <p>Elige tu modelo, contáctanos y disfruta de tu nuevo par.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ================= OFERTA ================= -->
+    <section id="oferta" class="offer">
+      <div class="container">
+        <div class="offer-panel reveal">
+          <span class="tag tag-light">Oferta de bienvenida</span>
+          <h2>10% de descuento en tu primer par</h2>
+          <p>Descubre Sole y disfruta de un descuento especial en tu primera compra.</p>
+          <button id="offer-button" type="button" class="btn butter" onclick="revealOffer()">Quiero mi descuento</button>
+          <div id="offer-reveal" class="offer-reveal hidden" aria-live="polite">
+            <p class="offer-reveal-title">¡Listo! Tu código de bienvenida es:</p>
+            <div class="offer-code-row">
+              <span class="offer-code">MONO10</span>
+              <button id="copy-code" type="button" class="btn outline" onclick="copyDiscount()">Copiar código</button>
+              <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero usar mi código MONO10 en mi primer par.')">Pedir por WhatsApp</button>
+            </div>
+            <p id="copy-feedback" class="copy-feedback hidden" role="status">Código copiado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= TESTIMONIOS ================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experiencias Sole</p>
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/Salvador.png" alt="Retrato genérico de una mujer sonriente.">
+                  <div>
+                    <p class="name">Salvador M.</p>
+                    <p class="occasion">Maison Margiela GAT</p>
+                  </div>
+                </div>
+                <p class="quote">"El diseño está increíble y el par llegó en perfectas condiciones. Se nota mucho la atención en los detalles."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/Emiliano.png" alt="Retrato genérico de un hombre sonriente.">
+                  <div>
+                    <p class="name">Emiliano M.</p>
+                    <p class="occasion">Common Projects</p>
+                  </div>
+                </div>
+                <p class="quote">"Me ayudaron a elegir el modelo que estaba buscando y todo el proceso de compra fue muy sencillo."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/Angel.png" alt="Retrato genérico de una mujer joven sonriente.">
+                  <div>
+                    <p class="name">Angel S.</p>
+                    <p class="occasion">Golden Goose</p>
+                  </div>
+                </div>
+                <p class="quote"></p>"Me encantó el estilo de la tienda. El sneaker llegó rápido y exactamente como lo esperaba."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="testimonial-prev" type="button" aria-label="Testimonio anterior"><i data-lucide="arrow-left"></i></button>
+          <div id="testimonial-dots" class="dots" aria-label="Seleccionar testimonio">
+            <button class="active" aria-label="Ver testimonio 1" aria-current="true"></button>
+            <button aria-label="Ver testimonio 2" aria-current="false"></button>
+            <button aria-label="Ver testimonio 3" aria-current="false"></button>
+          </div>
+          <button id="testimonial-next" type="button" aria-label="Siguiente testimonio"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+ <!-- ================= CONTACTO ================= -->
+   <section id="contacto" class="contact">
+  <div class="container contact-panel reveal">
+    <div class="contact-text">
+      <p class="eyebrow">SOLE SNEAKERS</p>
+      <h2>Encuentra tu estilo</h2>
+      <p class="lead">Conoce nuestra selección de sneakers y encuentra el par que mejor representa tu estilo.</p>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero conocer los sneakers disponibles en SOLE.')">Comprar ahora</button>
+    </div>
+
+    <aside class="contact-info" aria-label="Información de SOLE">
+      <ul>
+        <li><i data-lucide="instagram"></i> <a href="https://www.instagram.com/uzielopezz?igsh=aGh0emdlb21yY3Br&utm_source=qr" target="_blank" rel="noopener noreferrer">@sole.sneakers</a></li>
+        <li><i data-lucide="facebook"></i> <a href="https://www.instagram.com/uzielopezz?igsh=aGh0emdlb21yY3Br&utm_source=qr" target="_blank" rel="noopener noreferrer">SOLE Sneakers</a></li>
+        <li><i data-lucide="mail"></i> <a href="mailto:hola@sole.mx">hola@sole.mx</a></li>
+        <li><i data-lucide="clock-3"></i> Lunes a sábado, 10:00 a 19:00</li>
+      </ul>
+    </aside>
+
+
+</main>
+<!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">SNEAKERS WITH CARACTHER</p>
+      <p class="love">Todos los derechos reservados &copy; 2026</p>
+      <nav class="footer-links">
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+   <!-- Botón flotante de WhatsApp -->
+  <button id="whatsapp-float" type="button" class="whatsapp-float" aria-label="Escribir por WhatsApp" onclick="openWhatsApp('Hola, quiero conocer los sneakers disponibles en SOLE.')">
+    <i data-lucide="message-circle"></i>
+  </button>
+  <!-- ================= MODALES DE PRODUCTO ================= -->
+
+<!-- MODAL MAISON MARGIELA GATS -->
+<div id="modal-caja" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caja-title">
+  <div class="modal-panel">
+    <div class="modal-image">
+      <img src="img/Gats.png" alt="Maison Margiela Gats">
+      <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-caja')">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 id="modal-caja-title">Maison Margiela Gats</h2>
+      <p class="price">$16,900 MXN</p>
+      <p>Un sneaker de diseño minimalista y atemporal, inspirado en el estilo clásico y pensado para complementar looks sofisticados.</p>
+      <h3>Características:</h3>
+      <ul>
+        <li>Diseño minimalista</li>
+        <li>Estilo atemporal</li>
+        <li>Ideal para looks casuales y elegantes</li>
+      </ul>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir los Maison Margiela Gats.')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL GOLDEN GOOSE -->
+<div id="modal-vela" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-vela-title">
+  <div class="modal-panel">
+    <div class="modal-image">
+      <img src="img/Golden.png" alt="Golden Goose">
+      <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-vela')">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 id="modal-vela-title">Golden Goose</h2>
+      <p class="price">$18,900 MXN</p>
+      <p>Un sneaker premium con inspiración vintage y una estética única que combina personalidad con un estilo relajado.</p>
+      <h3>Características:</h3>
+      <ul>
+        <li>Estética vintage</li>
+        <li>Diseño premium</li>
+        <li>Personalidad única</li>
+      </ul>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir los Golden Goose.')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NEW BALANCE 990V6 -->
+<div id="modal-taza" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-taza-title">
+  <div class="modal-panel">
+    <div class="modal-image">
+      <img src="Img/new balance.png" alt="New Balance 990v6">
+      <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-taza')">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 id="modal-taza-title">New Balance 990v6</h2>
+      <p class="price">$3,999 MXN</p>
+      <p>Un modelo que combina comodidad y diseño premium, ideal para el día a día sin perder un estilo limpio y sofisticado.</p>
+      <h3>Características:</h3>
+      <ul>
+        <li>Diseño clásico</li>
+        <li>Comodidad para uso diario</li>
+        <li>Estilo versátil</li>
+      </ul>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir los New Balance 990v6.')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL ADIDAS SAMBA -->
+<div id="modal-jardin" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-jardin-title">
+  <div class="modal-panel">
+    <div class="modal-image">
+      <img src="img/Samba.png" alt="Adidas Samba OG">
+      <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-jardin')">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 id="modal-jardin-title">Adidas Samba OG</h2>
+      <p class="price">$2,900 MXN</p>
+      <p>Una silueta clásica y versátil que combina fácilmente con diferentes estilos y outfits.</p>
+      <h3>Características:</h3>
+      <ul>
+        <li>Silueta clásica</li>
+        <li>Diseño versátil</li>
+        <li>Ideal para cualquier look</li>
+      </ul>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir los Adidas Samba OG.')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL COMMON PROJECTS -->
+<div id="modal-kit" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-kit-title">
+  <div class="modal-panel">
+    <div class="modal-image">
+      <img src="img/Common Projects.png" alt="Common Projects">
+      <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-kit')">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 id="modal-kit-title">Common Projects</h2>
+      <p class="price">$9,725 MXN</p>
+      <p>Un diseño limpio y sofisticado que destaca por su estética minimalista y su facilidad para combinar con diferentes looks.</p>
+      <h3>Características:</h3>
+      <ul>
+        <li>Diseño minimalista</li>
+        <li>Estética sofisticada</li>
+        <li>Fácil de combinar</li>
+      </ul>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir los Common Projects.')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL ONITSUKA TIGER -->
+<div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+  <div class="modal-panel">
+    <div class="modal-image">
+      <img src="img/Onitzuka.png" alt="Onitsuka Tiger Mexico 66">
+      <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 id="modal-tarjeta-title">Onitsuka Tiger Mexico 66</h2>
+      <p class="price">$5,106 MXN</p>
+      <p>Una silueta ligera con inspiración clásica y una estética elegante que mantiene el estilo característico de la marca.</p>
+      <h3>Características:</h3>
+      <ul>
+        <li>Diseño clásico</li>
+        <li>Silueta ligera</li>
+        <li>Estilo atemporal</li>
+      </ul>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir los Onitsuka Tiger Mexico 66.')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL AUTRY -->
+<div id="modal-autry" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-autry-title">
+  <div class="modal-panel">
+    <div class="modal-image">
+      <img src="img/Autry.png" alt="Autry Medalist Low">
+      <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-autry')">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 id="modal-autry-title">Autry Medalist Low</h2>
+      <p class="price">$4,999 MXN</p>
+      <p>Un diseño retro y sofisticado con una estética limpia que mantiene el equilibrio entre lo clásico y lo moderno.</p>
+      <h3>Características:</h3>
+      <ul>
+        <li>Estética retro</li>
+        <li>Diseño atemporal</li>
+        <li>Estilo sofisticado</li>
+      </ul>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir los Autry Medalist Low.')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL AXEL ARIGATO -->
+<div id="modal-axel" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-axel-title">
+  <div class="modal-panel">
+    <div class="modal-image">
+      <img src="img/Axel.png" alt="Axel Arigato Clean 90">
+      <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-axel')">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 id="modal-axel-title">Axel Arigato Clean 90</h2>
+      <p class="price">$7,500 MXN</p>
+      <p>Una silueta minimalista y elegante pensada para quienes buscan un sneaker limpio y sofisticado.</p>
+      <h3>Características:</h3>
+      <ul>
+        <li>Silueta minimalista</li>
+        <li>Diseño elegante</li>
+        <li>Estilo sofisticado</li>
+      </ul>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir los Axel Arigato Clean 90.')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL VEJA -->
+<div id="modal-veja" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-veja-title">
+  <div class="modal-panel">
+    <div class="modal-image">
+      <img src="img/Veja.png" alt="Veja Campo">
+      <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-veja')">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h2 id="modal-veja-title">Veja Campo</h2>
+      <p class="price">$3,200 MXN</p>
+      <p>Un diseño sencillo y versátil que combina perfectamente con diferentes estilos para el día a día.</p>
+      <h3>Características:</h3>
+      <ul>
+        <li>Diseño sencillo</li>
+        <li>Estilo versátil</li>
+        <li>Ideal para uso diario</li>
+      </ul>
+      <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir los Veja Campo.')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
